@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-
+import Wordle from './components/Wordle'
 
 function App() {
   const [solution,setSolution] = useState(null)
@@ -18,13 +18,13 @@ function App() {
   return (
     <div className="App">
       <h1>Wordle (Lingo)</h1>
-      {solution && <div>solution is: {solution}</div>}
+      {solution && <div>solution is: <Wordle solution={solution}/></div>}
     </div>
   );
 }
 
 export default App
-
+// solution is a prop in the worlde now
 /* 
 
 data we need to track:
